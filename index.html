@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ExoDetect</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🌌 Decorative layers (DO NOT INTERACT WITH JS) -->
+  <div id="stars"></div>
+  <div id="stars-back"></div>
+<div id="stars-mid"></div>
+<div id="stars-front"></div>
+
+  <div id="overlay"></div>
+
+  <!-- 🚀 Main UI (UNCHANGED IDS) -->
+  <div id="ui">
+    <div class="dashboard">
+
+        <div id="loader" class="hidden">
+                <div class="orbit">
+        <div class="planet"></div>
+        </div>
+            <p>Analyzing stellar flux…</p>
+        </div>
+
+
+<header class="header">
+  <img src="logo.png" alt="ExoDetect Logo" class="logo" />
+  <h1>ExoDetect</h1>
+  <p>NASA TESS Exoplanet Transit Analyzer</p>
+</header>
+
+
+      <section class="controls">
+        <input id="tic" type="number" placeholder="Enter TIC ID" />
+        <button onclick="analyze()">Analyze</button>
+      </section>
+
+      <div id="output"></div>
+
+      <div id="metrics" class="metrics hidden">
+        <div class="metric-card">
+          <div class="label">Period</div>
+          <div class="value" id="m-period"></div>
+        </div>
+        <div class="metric-card">
+          <div class="label">Depth</div>
+          <div class="value" id="m-depth"></div>
+        </div>
+        <div class="metric-card">
+          <div class="label">SNR</div>
+          <div class="value" id="m-snr"></div>
+        </div>
+        <div class="metric-card">
+          <div class="label">Confidence</div>
+          <div class="value highlight" id="m-confidence"></div>
+        </div>
+      </div>
+      
+      <div class="chart-box">
+        <canvas id="lightcurve"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="foldedcurve"></canvas>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+  const originalAnalyze = window.analyze;
+
+  window.analyze = async function () {
+    document.getElementById("loader")?.classList.remove("hidden");
+    document.getElementById("metrics")?.classList.add("hidden");
+
+    try {
+      await originalAnalyze();
+    } finally {
+      document.getElementById("loader")?.classList.add("hidden");
+    }
+  };
+</script>
+
+</body>
+</html>
