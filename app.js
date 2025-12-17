@@ -35,7 +35,8 @@ if (rawChart) {
   output.innerText = "Analyzing TESS data…";
 
   try {
-    const res = await fetch("https://exodetect-backend.onrender.com/analyze/" + tic);
+    const res = await fetch(`https://exodetect-backend-3.onrender.com/analyze/${tic}`);
+
     const data = await res.json();
 
     console.log("Backend response:", data);
