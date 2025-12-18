@@ -1,3 +1,4 @@
+# © 2025 Abishek Xavier A — All rights reserved
 
 let rawChart = null;
 let foldedChart = null;
