@@ -483,6 +483,73 @@ button:active {
   color: #ffffff;
   text-shadow: 0 0 6px rgba(93, 220, 255, 0.35);
 }
+/* ---------- FOOTER SOCIAL ICONS ---------- */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.social-icon img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 0 6px rgba(93,220,255,0.25));
+}
+
+.social-icon:hover img {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(93,220,255,0.6));
+}
+
+/* ---------- CONTACT DROPDOWN ---------- */
+
+.contact-dropdown {
+  position: relative;
+}
+
+.contact-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #5ddcff;
+  font-size: 14.5px;
+  letter-spacing: 0.04em;
+}
+
+.contact-dropdown summary::marker {
+  display: none;
+}
+
+.contact-dropdown summary:hover {
+  text-shadow: 0 0 6px rgba(93,220,255,0.5);
+}
+
+.contact-box {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: rgba(10, 20, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(93,220,255,0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(93,220,255,0.15);
+  font-size: 14px;
+}
+
+.contact-box span {
+  color: #9fb4d8;
+  margin-right: 6px;
+}
+
+.contact-box code {
+  color: #e6f0ff;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
 
 
 
