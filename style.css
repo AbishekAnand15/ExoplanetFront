@@ -364,3 +364,55 @@ button:active {
   transform: translateY(0);
   box-shadow: 0 4px 15px rgba(93,220,255,0.25);
 }
+
+.info-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-section h2 {
+  color: #5ddcff;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.info-section p {
+  color: #e6f0ff;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.tech-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tech-list li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #e6f0ff;
+}
+
+details {
+  margin: 12px 0;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+summary {
+  font-weight: 600;
+  color: #5ddcff;
+  outline: none;
+}
+
+details p {
+  margin-top: 10px;
+  color: #dbe7ff;
+}
+
