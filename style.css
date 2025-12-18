@@ -485,32 +485,78 @@ button:active {
 }
 /* ---------- FOOTER SOCIAL ICONS ---------- */
 
+/* ---------- FOOTER SOCIAL ICONS ---------- */
+
 .footer-socials {
   display: flex;
   align-items: center;
-  gap: 18px;
-  margin-top: 18px;
+  gap: 22px;
+  margin-top: 20px;
 }
 
+/* Icon base */
 .social-icon img {
-  opacity: 1; /* keep fully visible */
+  width: 22px;
+  height: 22px;
+
+  opacity: 1;
 
   filter:
     invert(100%)
-    brightness(170%)     /* ⬅ main brightness boost */
-    contrast(120%)       /* ⬅ sharpens edges */
-    drop-shadow(0 0 10px rgba(93,220,255,0.6));
+    brightness(190%)
+    contrast(120%)
+    drop-shadow(0 0 12px rgba(93,220,255,0.6));
 
-  transition: filter 0.2s ease;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
-
+/* Hover glow */
 .social-icon:hover img {
+  transform: translateY(-2px);
   filter:
     invert(100%)
-    brightness(200%)
-    contrast(130%)
-    drop-shadow(0 0 16px rgba(93,220,255,0.9));
+    brightness(240%)
+    contrast(140%)
+    drop-shadow(0 0 20px rgba(93,220,255,0.95));
+}
+
+/* ---------- CONTACT DROPDOWN ---------- */
+
+.contact-dropdown {
+  position: relative;
+}
+
+.contact-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.contact-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Email popup */
+.contact-box {
+  position: absolute;
+  bottom: 38px;
+  left: 0;
+
+  background: rgba(10, 18, 40, 0.95);
+  border: 1px solid rgba(93,220,255,0.25);
+  border-radius: 14px;
+
+  padding: 10px 14px;
+
+  font-size: 13.5px;
+  color: #e6f0ff;
+  white-space: nowrap;
+
+  box-shadow:
+    0 0 28px rgba(93,220,255,0.35);
+
+  backdrop-filter: blur(6px);
 }
 
 
