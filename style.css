@@ -493,18 +493,26 @@ button:active {
 }
 
 .social-icon img {
-  width: 26px;
-  height: 26px;
-  opacity: 2;
-  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
-  filter: drop-shadow(0 0 6px rgba(93,220,255,0.25));
+  opacity: 1; /* keep fully visible */
+
+  filter:
+    invert(100%)
+    brightness(170%)     /* ⬅ main brightness boost */
+    contrast(120%)       /* ⬅ sharpens edges */
+    drop-shadow(0 0 10px rgba(93,220,255,0.6));
+
+  transition: filter 0.2s ease;
 }
 
+
 .social-icon:hover img {
-  opacity: 1.5;
-  transform: translateY(-2px) scale(1.05);
-  filter: drop-shadow(0 0 10px rgba(93,220,255,0.6));
+  filter:
+    invert(100%)
+    brightness(200%)
+    contrast(130%)
+    drop-shadow(0 0 16px rgba(93,220,255,0.9));
 }
+
 
 /* ---------- CONTACT DROPDOWN ---------- */
 
