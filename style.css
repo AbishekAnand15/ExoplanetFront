@@ -365,5 +365,89 @@ button:active {
   box-shadow: 0 4px 15px rgba(93,220,255,0.25);
 }
 
+.mega-footer {
+  background: #000;
+  color: #e6f0ff;
+  padding: 80px 60px 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
+  gap: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 60px;
+}
+
+.footer-brand h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  color: #cfd9ff;
+  line-height: 1.7;
+  max-width: 420px;
+  margin-bottom: 24px;
+}
+
+.footer-cta {
+  display: inline-block;
+  color: #5ddcff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-col a {
+  display: block;
+  color: #cfd9ff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #5ddcff;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 14px;
+  color: #cfd9ff;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 13px;
+  color: #9aa7c7;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .mega-footer {
+    padding: 60px 30px;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}
 
 
