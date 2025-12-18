@@ -89,41 +89,87 @@
       </div>
     </div>
 
-    <div class="footer-faq">
-      <h3>FAQ</h3>
+   <div class="footer-faq">
+  <h3>FAQ</h3>
 
-      <details>
-        <summary>What is a TIC ID?</summary>
-        <p>
-          A TIC (TESS Input Catalog) ID uniquely identifies a star observed
-          by NASA’s TESS mission.
-        </p>
-      </details>
+  <details>
+    <summary>Who is ExoDetect useful for?</summary>
+    <p>
+      ExoDetect is useful for students, astronomy enthusiasts, and
+      early-stage researchers interested in learning how exoplanet
+      transit signals are detected from real observational data.
+    </p>
+  </details>
 
-      <details>
-        <summary>Does this confirm exoplanets?</summary>
-        <p>
-          No. ExoDetect identifies potential transit signals.
-          All detections are candidates and require further validation.
-        </p>
-      </details>
+  <details>
+    <summary>What is a TIC ID?</summary>
+    <p>
+      A TIC (TESS Input Catalog) ID uniquely identifies a star observed
+      by NASA’s TESS mission and is used to retrieve its light curve data.
+    </p>
+  </details>
 
-      <details>
-        <summary>Why does analysis take time?</summary>
-        <p>
-          The system downloads real astronomical data and performs
-          signal processing, transit folding, and statistical evaluation.
-        </p>
-      </details>
+  <details>
+    <summary>What kind of data does ExoDetect analyze?</summary>
+    <p>
+      The tool analyzes publicly available photometric light curves
+      from NASA’s Transiting Exoplanet Survey Satellite (TESS),
+      accessed through the MAST archive.
+    </p>
+  </details>
 
-      <details>
-        <summary>Is this an official NASA tool?</summary>
-        <p>
-          No. This is a student research project and is not affiliated
-          with or endorsed by NASA.
-        </p>
-      </details>
-    </div>
+  <details>
+    <summary>Does this confirm the existence of exoplanets?</summary>
+    <p>
+      No. ExoDetect identifies potential transit-like signals.
+      All detections are candidates and require follow-up observations
+      and validation by professional pipelines.
+    </p>
+  </details>
+
+  <details>
+    <summary>What analysis methods are used?</summary>
+    <p>
+      The pipeline uses light curve preprocessing, noise reduction,
+      transit folding, depth estimation, and signal-to-noise evaluation
+      to assess potential transit events.
+    </p>
+  </details>
+
+  <details>
+    <summary>Why does the analysis sometimes take time?</summary>
+    <p>
+      Each request downloads real astronomical data and performs
+      multiple computational steps, which may take several seconds
+      depending on data size and server load.
+    </p>
+  </details>
+
+  <details>
+    <summary>What are the limitations of this tool?</summary>
+    <p>
+      ExoDetect does not perform full astrophysical validation,
+      stellar false-positive rejection, or multi-sector analysis.
+      It is intended for educational and exploratory purposes.
+    </p>
+  </details>
+
+  <details>
+    <summary>Is ExoDetect an official NASA tool?</summary>
+    <p>
+      No. This is an independent student research project and is not
+      affiliated with or endorsed by NASA.
+    </p>
+  </details>
+
+  <details>
+    <summary>Can this be used for learning or research?</summary>
+    <p>
+      Yes. ExoDetect is well-suited for learning signal processing,
+      exoplanet detection concepts, and working with real astronomical data.
+    </p>
+  </details>
+</div>
 
   </div>
 
